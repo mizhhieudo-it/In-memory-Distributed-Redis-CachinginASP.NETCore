@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SBzLXZbWO+y21rlY84flSfiNPF2l+tU9165zw5KMhtM=",
+  "Source": "DemoCacheMemoryAndRedis",
+  "BasePath": "_content/DemoCacheMemoryAndRedis",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

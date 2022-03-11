@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+
+namespace DemoCacheMemoryAndRedis.Models
+{
+    public partial class MovieDBContext : DbContext
+    {
+        public MovieDBContext()
+        {
+        }
+
+        public MovieDBContext(DbContextOptions<MovieDBContext> options)
+            : base(options)
+        {
+        }
+
+        public virtual DbSet<Movie> Movies { get; set; } = null!;
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("Server=DESKTOP-446OBGB;Database=MovieDB;Trusted_Connection=True;");
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Movie>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Movie");
+
+                entity.Property(e => e.MovieId)
+                    .HasMaxLength(255)
+                    .HasColumnName("MovieID");
+
+                entity.Property(e => e.MovieName).HasMaxLength(255);
+            });
+
+            OnModelCreatingPartial(modelBuilder);
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    }
+}
