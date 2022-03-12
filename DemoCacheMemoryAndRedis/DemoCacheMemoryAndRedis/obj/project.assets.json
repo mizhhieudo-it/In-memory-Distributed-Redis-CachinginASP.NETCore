@@ -201,6 +201,20 @@
           "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
+      "Microsoft.Extensions.Caching.SqlServer/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "1.0.19249.1",
+          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Caching.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Caching.SqlServer.dll": {}
+        }
+      },
       "Microsoft.Extensions.Caching.StackExchangeRedis/6.0.3": {
         "type": "package",
         "dependencies": {
@@ -1122,6 +1136,25 @@
         "microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
         "microsoft.extensions.caching.memory.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.SqlServer/6.0.3": {
+      "sha512": "OE/KGw0DTcc91mkz+K6BDVQkcn3kkIcnRNlsWqpZTRCgumAClv3R10XBXJcPvgnVGEknDCjND9X/ydsncLeo7g==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.sqlserver/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Caching.SqlServer.dll",
+        "lib/net461/Microsoft.Extensions.Caching.SqlServer.xml",
+        "lib/net6.0/Microsoft.Extensions.Caching.SqlServer.dll",
+        "lib/net6.0/Microsoft.Extensions.Caching.SqlServer.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.SqlServer.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.SqlServer.xml",
+        "microsoft.extensions.caching.sqlserver.6.0.3.nupkg.sha512",
+        "microsoft.extensions.caching.sqlserver.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.StackExchangeRedis/6.0.3": {
@@ -2289,6 +2322,7 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.3",
+      "Microsoft.Extensions.Caching.SqlServer >= 6.0.3",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 6.0.3",
       "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2340,6 +2374,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.0.3, )"
+          },
+          "Microsoft.Extensions.Caching.SqlServer": {
             "target": "Package",
             "version": "[6.0.3, )"
           },

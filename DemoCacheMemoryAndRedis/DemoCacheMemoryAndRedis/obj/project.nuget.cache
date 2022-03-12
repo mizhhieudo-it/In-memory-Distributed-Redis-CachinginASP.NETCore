@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "djslObDbqOK5WFVtSHjFnobFZzC+HLvrXd5LJWYPs2duyY0AvvQd9jnWPS+/RAKUyt0lL6D3CPGXai76n4J3Xw==",
+  "dgSpecHash": "HSu3zSRbUJ/TMrEgaF6MbPVGO9SelId3sKpLyPkJI/5br8ZQyzWmdK2Ml3nzmgFGi/3UvX973ODcmLhQmJ4v9g==",
   "success": true,
   "projectFilePath": "D:\\CacheInMemoryAndRedis\\DemoCacheMemoryAndRedis\\DemoCacheMemoryAndRedis\\DemoCacheMemoryAndRedis.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.caching.sqlserver\\6.0.3\\microsoft.extensions.caching.sqlserver.6.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\6.0.3\\microsoft.extensions.caching.stackexchangeredis.6.0.3.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",

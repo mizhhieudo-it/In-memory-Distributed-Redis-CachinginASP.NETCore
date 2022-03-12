@@ -62,9 +62,9 @@ namespace DemoCacheMemoryAndRedis.Controllers
                 // chuyển từ dạng json về dạng byte 
                 getMovieFromRedis =  Encoding.UTF8.GetBytes(serializeMovie);
                 // setting các option 
-                var options = new DistributedCacheEntryOptions()
-                                   .SetSlidingExpiration(TimeSpan.FromMilliseconds(5))
-                                   .SetAbsoluteExpiration(DateTime.Now.AddHours(6));
+                var options = new DistributedCacheEntryOptions().
+                    SetAbsoluteExpiration(DateTime.Now.AddMinutes(10)).   // chắc chắn là kiểu  gì đi nữa thì cache cũng sẽ hết hạn trong vòng 10 phút 
+                    SetSlidingExpiration(TimeSpan.FromMinutes(2));      // sau 2 phút nếu khách hàng ko sử dụng cache thì cache sẽ bị hủy
                 // chuyển vào cache với key - value - và option
                 await _distributedCache.SetAsync(cacheKey,getMovieFromRedis,options);
 
